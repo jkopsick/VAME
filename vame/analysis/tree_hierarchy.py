@@ -247,10 +247,11 @@ def graph_to_tree(motif_usage, transition_matrix, n_cluster, merge_sel=1):
 def draw_tree(T):
     # pos = nx.drawing.layout.fruchterman_reingold_layout(T)
     pos = hierarchy_pos(T,'Root',width=.5, vert_gap = 0.1, vert_loc = 0, xcenter = 50) 
-    fig = plt.figure(2)
+#     fig = plt.figure(2)
+    fig = plt.figure(2, figsize=(30.0, 10.0), dpi=100)
     nx.draw_networkx(T, pos)  
-    figManager = plt.get_current_fig_manager()
-    figManager.window.showMaximized()
+#     figManager = plt.get_current_fig_manager()
+#     figManager.window.showMaximized()
     
 
 def traverse_tree(T, root_node=None):
